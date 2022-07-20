@@ -1,0 +1,6 @@
+#ifndef C50923CB_2B9D_40DF_BF13_0C54E056FDFD
+#define C50923CB_2B9D_40DF_BF13_0C54E056FDFD
+#include "gameProcess.h"
+int bestAct2(Game game, int me);
+
+#endif /* C50923CB_2B9D_40DF_BF13_0C54E056FDFD */
