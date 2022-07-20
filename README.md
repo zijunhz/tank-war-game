@@ -94,7 +94,7 @@ The I/O format of this tank war game has two feature to improve user experience.
 
 ## AI
 
-The strategy of my AI is quite conservative for it assume its opponent is cleaver enough.
+The strategy of our AI is quite conservative for it assume its opponent is cleaver enough.
 
 Every turn, AI can take one action and so does its opponent. The AI will take the action that the minimal `scores` when its opponent takes one action is the highest.
 
