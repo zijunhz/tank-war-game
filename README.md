@@ -8,6 +8,7 @@ To compile it, you need to install:
 
 - `g++`, a cpp compiler. Remember to add it to PATH if you are using Windows.
 - `CMake`, a build process manager.
+- `GNU Make`, a tool which controls the generation of executables and other non-source files of a program from the program's source files.
 
 or you can use IDEs such as `CLion`.
 
