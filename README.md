@@ -90,7 +90,7 @@ The I/O format of this tank war game has two feature to improve user experience.
 
 2. The directions of the bullets and tanks are presented by arrows. This is also a great improvement in user experience because now the directions are clearly shown.
 
-![Screenshot of the game](assets/2022-07-16-16-45-36-image.png)
+<img src="assets/2022-07-16-16-45-36-image.png" title="" alt="Screenshot of the game" data-align="center">
 
 ## AI
 
