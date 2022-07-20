@@ -1,6 +1,6 @@
 # Tank War
 
-A simple command line tank war game that supports PVP and PVE.
+A simple command line tank war game that supports PVP, PVE and DEMO.
 
 ## Compile the program
 
