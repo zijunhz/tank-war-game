@@ -84,13 +84,13 @@ You can find the declaration of `Game` in `gameProcess.h`.
 
 ## I/O format
 
-The I/O format of this tank war game has two feature to improve user experience.
-
-1. The map is colored. Players are painted with red and cyan and the boundary is painted yellow. This greatly reduces the difficulty of recognizing the location of the tanks and the boundary.
-
-2. The directions of the bullets and tanks are presented by arrows. This is also a great improvement in user experience because now the directions are clearly shown.
+The I/O format of this tank war game has three feature to improve user experience.
 
 ![Screenshot of the game](assets/2022-07-16-16-45-36-image.png)
+
+1. The map is colored. Players are painted with red and cyan and the boundary is painted yellow. This greatly reduces the difficulty of recognizing the location of the tanks and the boundary.
+2. The directions of the bullets and tanks are presented by arrows. This is also a great improvement in user experience because now the directions are clearly shown.
+3. All kinds of inputs in the game (except command line argument) are considered, i.e. if the input is not valid, the program won't crash. Instead, it will provide you with a notification and let you input again. We are fully aware the pain when you are about to win but crash the game just because you accidentally type `-` instead of `0`.
 
 ## AI
 
