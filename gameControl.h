@@ -5,6 +5,10 @@ typedef enum {
     PvE,
     Demo
 } Mode;
+int isValidDirection(int f0, int f2);
+int isValidAct(int act);
+int somethingLeft();
+int isIn20(int x, int y);
 void mainLoop(Mode mode, int life, char* logFile);
 void pvp();
 void pve();
