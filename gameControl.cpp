@@ -117,7 +117,7 @@ void mainLoop(Mode mode, int life, char* logFile) {
                 printf("Input action for " CYAN "player 2" RESET " > ");
                 while (scanf("%d", &act1) != 1 || (!isValidAct(act1)) || somethingLeft()) {
                     fflush(stdin);
-                    printf("Input valid actions for " CYAN "player 2" RESET " > ");
+                    printf("Input valid action for " CYAN "player 2" RESET " > ");
                 }
                 act0 = bestAct(game, 0, 5, game.p[0].life, game.p[1].life);
                 break;
