@@ -47,6 +47,11 @@ int bestAct(Game game, int me, int depth, int lifeMe, int lifeYou) {
     return res;
 }
 
+// =================== standard for evaluation ====================
+// lose game: 100000
+// hurt: 1000/blood
+// risk: <50
+
 /**
  * @brief evaluate how good it is for p[me] to take act in the next move.
  *
@@ -58,12 +63,6 @@ int bestAct(Game game, int me, int depth, int lifeMe, int lifeYou) {
  * @param lifeYou life of p[you] in the last depth
  * @return double how good it is, the better the higher
  */
-
-// =================== standard for evaluation ====================
-// lose game: 100000
-// hurt: 1000/blood
-// risk: <50
-
 double evaluateAct(Game game, int me, int act, int depth, int lifeMe, int lifeYou) {
     double res = 99999999;
     int you = 1 - me;
