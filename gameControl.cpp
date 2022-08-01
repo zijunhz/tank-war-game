@@ -145,8 +145,5 @@ void mainLoop(Mode mode, int life, char* logFile) {
     } while (game.processOneTurn(act0, act1, 1));
     game.showFinalResult();
     puts("Press enter to exit");
-    if (mode != Demo) {
-        getchar();
-    }
     getchar();
 }
