@@ -84,7 +84,7 @@ You can find the declaration of `Game` in `gameProcess.h`.
 
 ## I/O format
 
-The I/O format of this tank war game has three feature to improve user experience.
+The I/O format of this tank war game has three features to improve user experience.
 
 ![Screenshot of the game](assets/2022-07-16-16-45-36-image.png)
 
