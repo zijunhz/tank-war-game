@@ -11,21 +11,10 @@ int isValidDirection(int f0, int f1) {
     return (0 <= f0 && f0 <= 3 && 0 <= f1 && f1 <= 3);
 }
 
-/**
- * @brief judge whether an act is valid
- *
- * @param act
- * @return int
- */
 int isValidAct(int act) {
     return 0 <= act && act <= 2;
 }
 
-/**
- * @brief judge whether the user inputs too many command
- *
- * @return int
- */
 int somethingLeft() {
     char ch;
     ch = getchar();
@@ -38,24 +27,10 @@ int somethingLeft() {
     return 0;
 }
 
-/**
- * @brief judge whether (x,y) is in the initial board
- *
- * @param x
- * @param y
- * @return int
- */
 int isIn20(int x, int y) {
     return 1 <= x && x <= 20 && 1 <= y && y <= 20;
 }
 
-/**
- * @brief handle the game's loop
- *
- * @param mode what mode is it
- * @param life init life
- * @param logFile where to store the log file
- */
 void mainLoop(Mode mode, int life, char* logFile) {
     int x0 = 1, y0 = 1, x1 = 20, y1 = 20;
     int f0 = 2, f1 = 0;

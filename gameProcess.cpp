@@ -14,18 +14,6 @@ int getDy(Direction d) {
     return res[d];
 }
 
-/**
- * @brief Construct a new Game:: Game object
- *
- * @param x0 x=x0+1
- * @param y0 y=t0+1
- * @param x1 same
- * @param y1 same
- * @param dir0 direction of p0
- * @param dir1 direction of p1
- * @param life init life
- * @param logFile where to store the log file
- */
 Game::Game(int x0, int y0, int x1, int y1, Direction dir0, Direction dir1, int life, char* logFile) {
     p[0].init(x0, y0, life, getDx(dir0), getDy(dir0), dir0, 0);
     p[1].init(x1, y1, life, getDx(dir1), getDy(dir1), dir1, 0);
@@ -35,15 +23,6 @@ Game::Game(int x0, int y0, int x1, int y1, Direction dir0, Direction dir1, int l
     fileLog = logFile;
 }
 
-/**
- * @brief p[0] takes act1 and p[1] takes act2, update the game by 1 turn by calling other methods in Game class
- *
- * @return 1: game continues 0: game ends
- *
- * @param act0 0: move 1/2: turn left/right
- * @param act1 same as act1
- * @param doPrint whether to print the result or not
- */
 int Game::processOneTurn(int act0, int act1, int doPrint) {
     turn++;
     p[0].turn(act0);
@@ -71,19 +50,10 @@ int Game::processOneTurn(int act0, int act1, int doPrint) {
     return 1;
 }
 
-/**
- * @brief judge whether the game ends or not
- *
- * @return int 1 if end 0 if not
- */
 int Game::gameEnd() {
     return (p[0].life <= 0 || p[1].life <= 0);
 }
 
-/**
- * @brief print final result when game ends
- *
- */
 void Game::showFinalResult() {
     print();
     printLog();
@@ -113,10 +83,6 @@ void Game::showFinalResult() {
     fclose(fp);
 }
 
-/**
- * @brief generate the game's bullet
- *
- */
 void Game::generateBullet() {
     if ((turn - 1) % 3 == 0) {
         for (int i = 0; i <= 1; i++) {
@@ -127,11 +93,6 @@ void Game::generateBullet() {
     }
 }
 
-/**
- * @brief judge tank collision
- *
- * @return int 1: a collision happens 0: no collision
- */
 int Game::tankTankCollision() {
     if (p[0].x == p[1].x && p[0].y == p[1].y) {
         if (p[0].life < p[1].life) {
@@ -148,10 +109,6 @@ int Game::tankTankCollision() {
     return 0;
 }
 
-/**
- * @brief move bullet
- *
- */
 void Game::moveBullet() {
     int i = 1;
     while (i <= bltCnt) {
@@ -186,33 +143,15 @@ void Game::moveBullet() {
     }
 }
 
-/**
- * @brief judge whether a bullet is too far away from the boundary
- *
- * @param x x of the bullet
- * @param y y of the bullet
- * @return int 1 if it's too far 0 if it's not
- */
 int Game::isBulletOut(int x, int y) {
     return (x < -5 || x > 25 || y < -5 || y > 25);
 }
 
-/**
- * @brief judge whether (x,y) is in the boundary
- *
- * @param x
- * @param y
- * @return int 0 if it's out and 1 if it's in
- */
 int Game::isIn(int x, int y) {
     int boundaryL = getBoundMin(), boundaryR = getBoundMax();
     return (boundaryL <= x && x <= boundaryR && boundaryL <= y && y <= boundaryR);
 }
 
-/**
- * @brief print the game
- *
- */
 void Game::print() {
     puts("");
     printf(GREEN "Life " RED "Player 1: %d" RESET ", " CYAN "Player 2: %d" RESET ", Turn: %d\n", p[0].life, p[1].life, turn);
@@ -248,10 +187,6 @@ void Game::print() {
     printf("\n");
 }
 
-/**
- * @brief print the game in log
- *
- */
 void Game::printLog() {
     FILE* fp = fopen(fileLog, "a");
     fprintf(fp, "\nLife Player 1: %d, Player 2: %d, Turn: %d\n", p[0].life, p[1].life, turn);
@@ -285,39 +220,18 @@ void Game::printLog() {
     fclose(fp);
 }
 
-/**
- * @brief Get the Bound Min object
- *
- * @return int min boundary
- */
 int Game::getBoundMin() {
     int size = 10 - turn / 16;
     size = size < 0 ? 0 : size;
     return 11 - size;
 }
 
-/**
- * @brief Get the Bound Max object
- *
- * @return int max boundary
- */
 int Game::getBoundMax() {
     int size = 10 - turn / 16;
     size = size < 0 ? 0 : size;
     return 10 + size;
 }
 
-/**
- * @brief init a player
- *
- * @param x_
- * @param y_
- * @param life_
- * @param dx_
- * @param dy_
- * @param dir_
- * @param isTurned_ this variable can be used if a player cannot move after turning, but in this set of rule it's useless
- */
 void Player::init(int x_, int y_, int life_, int dx_, int dy_, Direction dir_, int isTurned_) {
     x = x_;
     y = y_;
@@ -328,11 +242,6 @@ void Player::init(int x_, int y_, int life_, int dx_, int dy_, Direction dir_, i
     isTurned = isTurned_;
 }
 
-/**
- * @brief update the player's dx and dy based on act
- *
- * @param act
- */
 void Player::turn(int act) {
     if (act == 0) {
         return;
@@ -343,24 +252,11 @@ void Player::turn(int act) {
     dy = getDy(dir);
 }
 
-/**
- * @brief move this player
- *
- */
 void Player::move() {
     x = x + dx;
     y = y + dy;
 }
 
-/**
- * @brief init a bullet
- *
- * @param x
- * @param y
- * @param dir
- * @param dx
- * @param dy
- */
 void Bullet::init(int x_, int y_, Direction dir_, int dx_, int dy_) {
     x = x_;
     y = y_;
