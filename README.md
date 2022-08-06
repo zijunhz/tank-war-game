@@ -86,7 +86,7 @@ You can find the declaration of `Game` in `gameProcess.h`.
 
 The I/O format of this tank war game has three features to improve user experience.
 
-![Screenshot of the game](assets/2022-07-16-16-45-36-image.png)
+![Screenshot of the game](https://s1.ax1x.com/2022/08/06/vnL8YT.png)
 
 1. The map is colored. Players are painted with red and cyan and the boundary is painted yellow. This greatly reduces the difficulty of recognizing the location of the tanks and the boundary.
 2. The directions of the bullets and tanks are presented by arrows. This is also a great improvement in user experience because now the directions are clearly shown.
