@@ -92,7 +92,7 @@ The I/O format of this tank war game has three features to improve user experien
 2. The directions of the bullets and tanks are presented by arrows. This is also a great improvement in user experience because now the directions are clearly shown.
 3. All kinds of inputs in the game (except command line argument) are considered, i.e. if the input is not valid, the program won't crash. Instead, it will provide you with a notification and let you input again. I am fully aware the pain when you are about to win but crash the game just because you accidentally type `-` instead of `0`.
 
-## AI (bonus 1)
+## AI
 
 The strategy of the AI is quite conservative for it assume its opponent is cleaver enough.
 
