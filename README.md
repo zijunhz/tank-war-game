@@ -78,7 +78,7 @@ You can find its declaration in `gameProcess.h`.
 
 It contains all the information of a game status, including two players and all the bullets.
 
-The number of methods of this class is too large, but you can check out comments in `gameProcess.cpp` to see what each method do.
+The number of methods of this class is too large, but you can check out comments in `gameProcess.h` to see what each method do.
 
 You can find the declaration of `Game` in `gameProcess.h`.
 
